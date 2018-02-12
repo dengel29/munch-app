@@ -3,6 +3,7 @@ class Api::V1::MenusController < Api::V1::BaseController
   before_action :set_menu, only: [ :show ]
 
   def show
+    @menu = set_menu
   end
 
   def index
@@ -13,4 +14,5 @@ class Api::V1::MenusController < Api::V1::BaseController
   def set_menu
     @menu = Menu.find(params[:id])
     authorize @menu
+  end
 end

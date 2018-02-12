@@ -8,7 +8,7 @@ class Api::V1::MenuItemsController < Api::V1::BaseController
 
   def index
     @menu_items = MenuItem.all
-    @menu_items = policy_scope(MenuItem)
+    # @menu_items = policy_scope(MenuItem)
   end
 
   def set_menu_item
