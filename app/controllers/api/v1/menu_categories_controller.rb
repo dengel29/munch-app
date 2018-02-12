@@ -9,7 +9,7 @@ class Api::V1::MenuCategoriesController < Api::V1::BaseController
 
   def index
     @menu_categories = MenuCategory.all
-    # @menu_categories = policy_scope(MenuCategory)
+    @menu_categories = policy_scope(MenuCategory)
   end
 
    def set_menu_category
